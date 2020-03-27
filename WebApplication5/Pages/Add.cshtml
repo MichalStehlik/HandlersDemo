@@ -1,0 +1,15 @@
+﻿@page
+@model WebApplication5.AddModel
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h1>Add</h1>
+<form method="post">
+    <input type="text" asp-for="Input" />
+    <button type="submit">Odeslat</button>
+</form>
+
+<p>@Model.Input</p>
+<a asp-page="/Add" asp-route-input="@Model.Input">Přidej</a>
+<a asp-page="/Add" asp-route-input="@Model.Input" asp-page-handler="Nazdar">Přidej Nazdar</a>
